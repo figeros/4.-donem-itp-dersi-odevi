@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        QC dosyası komutları rehberi
+      </title>
+</head>
+
+<body>
+
+    <h1>QC KOMUTLARI REHBERİ</h1>
+
+    <p>.qc dosyaları herhangi bir modelin özelliklerini tanımlayan dosyadır. Studiomdl derleyecisi bu dosya içindeki
+        bilgilere göre modeli derler ve .mdl haline getirir.</p>
+
+        <p>Komutların küçük karakterler ile yazıldığına dikkat edilmesi gerekiyor aksi takdirde derleyeci hata verecektir.
+        </p>
+
+    <h2>QC dosyasına yorum bırakma:</h2>
+
+        <p>Yorum yapacağınız satırın başına // koyarak ya da yorumunuzun başına /*, sonuna da */ koyarak yorum
+        yapabilirsiniz.</p>
+
+        <code>//bu bir yorum. <br />
+
+        /*
+        bu da bir yorum<br />
+        hatta bu da<br />
+        buradakilerin hepsi birer yorum
+        */</code>
+
+    <h2>$modelname &lt;model adı&gt;.mdl</h2>
+
+        <p>Derleyeciye modele ne ad vereceğini söyler.</p>
+
+        <code>$modelname bombaci_osman.mdl</code>
+    
+    
+    <h2>$cd &lt;adres&gt;</h2>
+
+        <p>Bu komut derleyeciye model materyallerin (3d modeller,dokular...) nerede olduğunu söyler .DOS komutu olan
+        $cd ile aynıdır diyebiliriz.<br /> QC dosyası ile aynı klasörde olduğunu belirtmek için:</p>
+
+        <code> $cd ".\"</code>
+
+        <p>ya da aynı dizinde başka bir klasör içinde ise:</p>
+
+        <code>$cd ".\materyaller"</code>
+
+        <p>ya da direkt bir adres belirtmek için</p>
+
+        <code>$cd "C:\modeller\bambaci_osman\materyaller"</code>
+    
+    <h2>$cdtexture &lt;adres&gt;</h2>
+        <p>Bu komut eğer doku dosyaları model dosyalarından farklı bir adreste ise kullanılır</p>
+
+        <code>$cdtexture ".\osman_ayakkabı.bmp"</code>
+
+        <p>direkt bir adres belirtmek için:</p>
+
+        <code>$cdtexture "C:\Users\303\Desktop\model_sources\8bitbmp"</code>
+    
+    <h2> $cliptotextures</h2>
+
+        <p>Studiomdl derleyecisi varsayılan olarak doku dosyalarını optimize etmek amacıyla, doku kenarında
+        kullanılmayan yerleri kırpar ve sınırları kırpılan yerlere göre değiştirir. Fakat bu model üzerinde
+        kenar çizgisi gözükmesi gibi sorunlara yol açar. Bu komut ile derleyeciye bu işlemin yapılmaması
+        söylenir.</p>
+
+        <p>Svev-Coop studiomdl derleyecisi otomatik olarak bu işlemi gerçekleştirmez, bu derleyicide bu komutu
+        kullanmaya gerek yoktur.</p>
+
+        <code>$cliptotextures</code> 
+    
+   <h2> $scale &lt;değer&gt; </h2>
+    
+        <p>Bu komutu $body veya $sequence komutlarından önce koyarsanız bu komut tüm
+        modelin boyutunu değiştirir. Modelin varsayılan büyüklüğü 1.0 dır. Modeli büyütmek için örnek:</p>
+        <code>$scale 2.0 </code>
+        <p>modeli küçültmek için örnek:</p> 
+        
+        <code>$scale 0.5</code> 
+        
+        <p>Bu komut QC dosyası içinde farklı yerlerde ve birden fazla kez kullanılabilir.</p>
+        
+    <h2> $texrendermode &lt;doku adı&gt;.bmp &lt;işleme modu&gt; </h2>
+
+        <p>Bu komut belirtilen dokular için işleme (render) modlarını seçer. Eğer aynı doku üzerinde birden
+        fazla mod bulunacaksa tek bir satırda belirtilemez ayrı ayrı belirtilmeleri gerekir.</p>
+
+        <code>$texrendermode "hair.bmp" masked<br />
+        $texrendermode "glasses.bmp" chrome<br />
+        $texrendermode "glasses.bmp" additive</code>
+
+    <h2>$gamma &lt;değer&gt; </h2>
+
+        <p>İsteğe bağlı olan bu komut doku üzerindeki kontrastı değiştirmek için kullanılır. Varsayılan
+        değeri 1.8'dir.Dokuyu daha karanlık yapmak için gamma değerini yükseltin, daha aydınlık yapmak
+        için gamma değerini düşürün.<br /> Örnek:</p>
+
+        <code>$gamma 2.0</code>
+
+    <h2> $origin &lt;X&gt;&lt;Y&gt;&lt;Z&gt;&lt;Dönme açısı&gt;</h2>
+
+        <p>Bu isteğe bağlı komut ile X Y Z koordinatları kullanılarak modelin pozisyonu ve
+        animasyonlarını doğrultmak için kullanılır. Burada belirtilen değerler modelin
+        tüm durumunu etkiler. Sadece belirli bir durum için bu etkilerin gerçekleşmesi
+        isteniyorsa bunun $sequence komutu içinde yazılması gerekiyor.<br />Bunun en çok
+        kullanılan örneği ise oyuncu modeli ve silah modelleri için Z ekseni
+        doğrultmasıdır:</p>
+
+        <code>$origin 0 0 36</code>
+
+        <p>bütün modeli 180 derece döndürmek için:</p>
+
+       <code>$origin 0 0 0 180</code>
+
+
+    <h2>$eyeposition</h2>
+
+        <p>Oyuncu dışı varlıkların gözlerinin model üzerinde nerede olduğunu belirtmek için kullanılır.
+        Oyun yapayzekası bu göz pozisyonunu varlığın oyuncuyu ya da diğer varlıkları nereden göreceğini 
+        belirlemek için kullanır.Örnek olarak Barney NPC'sinin göz pozisyonu:</p>
+         
+        <code>$eyeposition 0 0 63</code>
+
+    <h2>$body &lt;3d model adı&gt;</h2>
+
+        <p>Bu komut modelin kullanacağı referans 3d modeli tanımlar.
+        <br />Örnek olarak:</p>
+
+        <code>$body studio "b_osman_model"</code>
+
+        <p>scale <değer> , $body komutu içinde 3d modelin boyutunu değiştirmek için kullanılabilir.
+        Bu şekilde sadece 3d modelin boyutunu değiştirir, modelin iskeletine etki etmez.</p>
+        <code>$body studio "b_osman_model" scale 1.5</code>
+
+    <h2>$bodygroup &lt;bodygroup adı&gt; {bodygroup için değiştirilebilir 3d model adları}</h2>
+
+        <p>Bu komut model üzerindeki değiştirilebilir 3d modelleri tanımlar.
+        Buna Half Life Scientist npc'lerinin kafalarını değiştirmek ve npclerin elindeki silah modellerini değiştirmek örnek gösterilebilir. 
+        En başa konulan 3d model ilk önce gösterilir. Blank değerini koymak o değer seçildiğinde o bodygroup için hiçbir 3d modelin görünmemesini sağlar.
+        Bodygroupların sorunsuz çalışabilmesi için aynı iskelete sahip olmaları gerekiyor.
+        <br />Örnek:</p>
+
+        <code>$bodygroup "bosman"<br />
+        {<br />
+        studio "b_osman_model_1"<br />
+        studio "b_osman_model_2"<br />
+        blank<br />
+        }</code>
+
+        <p>$body komutunda olduğu gibi bu komutta da scale kullanılabilir. 
+        <br />Örnek:</p>
+
+        <code>$bodygroup "bosman"<br />
+        {<br />
+        studio "b_osman_model_1" scale 0.8<br />
+        studio "b_osman_model_2" scale 1.5<br />
+        }</code>
+
+    
+    <h2>$texturegroup &lt;3d model adı&gt; {.bmp doku grupları }</h2>
+
+        <p>Bu komut model üzerindeki değişebilir dokuları tanımlar.
+        Çoğunlukla ten rengi veya kıyafet çeşitliliğini sağlamak için kullanılır.
+        İlk satıra varsayılan olarak kullanılacak doku dosyaları, diğer satırlara ise değiştirmek üzere olan doku dosyaları yazılır.
+        Bu isimler belirtilirken .bmp dosya türü de yazılmak zorundadır. 
+        <br />HECU asker modelinden bir örnek:</p>
+        
+        <code>$texturegroup arms<br />
+        {<br />
+        { "newarm.bmp" "handback.bmp" "helmet.bmp" }<br />
+        { "newarm(dark).bmp" "handback(dark).bmp" "helmet(dark).bmp" }<br />
+        }</code>
+
+    <h2>$renamebone &lt;adı değiştirlecek kemik&gt; &lt;yeni ad&gt;</h2>
+
+        <p>Bu isteğe bağlı komut ile model iskeletinin herhangi bir kemiği yeniden adlandırılabilir.
+        Çoğunlukla iskeletin model veya animasyonlarla olan isim farklılıklarını düzeltmek için kullanılır. 
+        <br />Örnek:</p>
+        
+        <code>$renamebone "Bip01 R Calf" "Bip01 R Leg1"</code>
+
+    <h2>$mirrorbone &lt;simetrisi oluşturulacak kemik&gt;</h2>
+        
+        <p>Bu isteğe bağlı komut herhangi bir kemiği Z ekseninde simetrik kopyasını oluşturur.
+        Bu aynı zamanda o kemiğe bağlı (evlat edilen) diğer kemiklere de etki eder.
+        <br />Örnek:</p>
+        
+        <code>$mirrorbone "propbase"</code>
+
+    <h2>$include &lt;.qc dosyasının adı &gt;</h2>
+
+        <p>Bu komut eğer başka bir .qc dosyası dahil edilecekse kullanılır.
+        Ortak kullanılan komutları bu şekilde bağlamak kullanışlı olabilir.
+        <br />Örnek:</p>
+
+        <code>$include ".\diğer\hitboxes.qc"</code>
+
+        <p>Direkt adres belirtmek için:</p>
+        
+        <code>$include "C:\modeller\ortak\hitboxes.qc"</code>
+
+    <h2>$attachment &lt; sıra numarası &gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt;</h2>
+
+        <p>Silah ateşi veya kovan atma noktaları gibi yerleri belirtmek için belirtilen kemik üzerinde bir nokta tanımlar.
+        Her model için limit 4'tür. Tanımlama sayıları 0dan başlayıp 3e kadar gider. 
+        Kemiğin bulunduğu nokta merkez kabul edilir ve bu noktanın koordinatları bu merkeze göre belirlenir. 
+        Mesela 0 0 0 noktası kemiğin tam bulunduğu yeri belirtirken 0 0 4 noktası ise kemikten +Z yönünde 4 birim uzakta olduğu yeri belirtir. 
+        <br />Örnek:</p>
+        
+        <code>$attachment 0 "bip01 R hand" 25 0 5</code>
+
+    <h2>$hbox &lt;hasar grup numarası&gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;X2&gt; &lt;Y2&gt; &lt;Z2&gt;</h2>
+        
+        <p>Studiomdl varsayılan olarak $hbox satırının olup olmadığını kontrol eder, eğer yoksa modele göre kendisi otomatik olarak vurulma kutusu oluşturur.
+        Komut kullanıldığında sadece satırlarda belirtilen kemikler için vurulma kutusu oluşturulur.
+        Bu komut aynı zamanda vurulma kutularının hasar gruplarını da değiştirebilir.<br />Örnek:</p>
+        
+        <code>$hbox 1 "Bip01 Head" -0.33 -4.5 -2.5 8 4.5 2.5</code>
+        
+        <p>Birinci ve ikinci XYZ koordinatları vurulma kutusunun oluşturulacağı kemiğin yeri merkez kabul edilerek birbine çapraz olacak şekilde girilir. 
+        Bir modelin vurulma kutularını değiştirmek için mevcut noktaları gerekiyorsa studiomdl derleyecisine -h komutuyla bunları bir metin belgesine kaydetmesi söylenebilir:</p>
+        
+        <code>studiomdl.exe -h b_osman.qc >hitboxes.txt</code>
+        
+        <p>Eğer Crowbar.exe kullanıyorsanız decompile işlemi yaparken aynı işlemi yapması için ilgili kutuyu işaretleyebilirsiniz.
+        Model göstericisi kullanarak da vurulma kutularını görebilirsiniz.
+        <br />Ek olarak oyun içinde r_drawentities 4 komutuyla model üzerinde vurulma kutularını görüntüleyebilir, 
+        r_drawentities 3 komuyutla da sadece vurulma kutularını gösterebilirsiniz.</p>
+
+        <p>Vurulma kutuları, etkileşim halinde farklı olayları (animasyon vs.) gerçekleştirmek için gruplara ayrılmıştır.
+        Gruplar etkileşim olduğunda farklı olayları gerçekleştirir.<br />
+        Özel bir animasyon gerçekleşmediği takdirde aşağıdaki jenerik animasyonlar oynatılacaktır:</p>
+
+        <code>ACT_SMALL_FLINCH<br />
+        ACT_DIEVIOLENT<br />
+        ACT_DIEFORWARD <br />
+        ACT_DIEBACKWARD<br />
+        (son iki tanesi hasarın alındığı yöne göre oynatılır)</code>
+
+        <table border="1">
+            <tr>
+                    <td>
+                    <b>Hasar Grubu</B>
+                    </td>
+                    <td>
+                        <b>Açıklama</B>
+                    </td>
+                    <td>
+                        <b>Özel vurulma/ölme animasyonları</B>
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        0
+                    </td>
+                    <td>
+                         Jenerik
+                    </td>
+                    <td>
+            
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                         Baş
+                    </td>
+                    <td>
+                        Vurulma animasyonu:ACT_FLINCH_HEAD
+                        <br>Ölme animasyonu: ACT_DIE_HEADSHOT
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        gövde
+                    </td>
+                    <td>
+            
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                    karın
+                    </td>
+                    <td>
+                        Vurulma animasyonu: ACT_FLINCH_STOMACH
+                    <br>Ölme animasyonu: ACT_DIE_GUTSHOT
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                    Sol kol
+                    </td>
+                    <td>
+                    Vurulma animasyonu: ACT_FLINCH_LEFTARM
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                    Sağ kol
+                    </td>
+                    <td>
+                    Vurulma animasyonu: ACT_FLINCH_RIGHTARM 
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                    Sol bacak
+                    </td>
+                    <td>
+                    Vurulma animasyonu: ACT_FLINCH_LEFTLEG
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                        7
+                    </td>
+                    <td>
+                    Sağ bacak
+                    </td>
+                    <td>
+                    Vurulma animasyonu: ACT_FLINCH_RIGHTLEG
+                    </td>
+            </tr>
+        </table>
+        
+       <p> Hasar grupları sadece vurulan bölgenin hasar katsayısını belirlemez aynı zamanda modelin farklı bölgelerden vurulması veya öldürülmesi için farklı animasyonlar oynatmasını sağlar.
+        <br />Son olarak, vurulma kutuları HLMV'nin en son çıkan sürümlerinde düzenlenilebilmektedir.</p>
+
+
+</body>
+
+</html>
