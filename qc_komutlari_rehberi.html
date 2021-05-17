@@ -5,50 +5,9 @@
     <title>
         QC dosyası komutları rehberi
     </title>
-    <style>
 
-        body {
-            font-family: Verdana;
-            display: flex;
-            flex-direction: column;
-            margin:0;
-        }
-
-        header , footer {
-          background-color:  #ff6c33;   
-          height: 90px;
-          padding: 50px;
-          padding-left: 100px; 
-          color: white;
-        }
-
-        .main {
-            background-color: #eeeeee;
-            padding-top: 50px;
-            padding-right: 240px;
-            padding-bottom: 50px;
-            padding-left: 240px;
-
-        }
-        .main h2 {
-            color: #24c602;
-        }
-
-        .code {
-            background-color: #bbbbbb;
-            font-family: courier;
-            padding: 20px;
-        }
-
-        table {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: whitesmoke;
-        }
-
-        </style>
+    <link rel="stylesheet" href="stil.css">
+    <script src="karanlik.js"></script>
 
 </head>
 
@@ -56,15 +15,19 @@
     <header>
         <h1>Figeros.net</h1>
         <h2>QC KOMUTLARI REHBERİ</h2>
+        <div class="butonlar">
+                <p onclick=location.href="ana_menu.html">Ana Sayfa</p>
+                <p id="mod" onclick=moddegis()>Karanlık Mod</p>
+        </div>
     </header>
-    <div class="main">
+    <main>
     <p>.qc dosyaları herhangi bir modelin özelliklerini tanımlayan dosyadır. Studiomdl derleyecisi bu dosya içindeki
         bilgilere göre modeli derler ve .mdl haline getirir.</p>
 
         <p>Komutların küçük karakterler ile yazıldığına dikkat edilmesi gerekiyor aksi takdirde derleyeci hata verecektir.
         </p>
 
-    <h2>QC dosyasına yorum bırakma:</h2>
+    <h2>QC dosyasına yorum bırakma</h2>
 
         <p>Yorum yapacağınız satırın başına // koyarak ya da yorumunuzun başına /*, sonuna da */ koyarak yorum
         yapabilirsiniz.</p>
@@ -86,7 +49,7 @@
     
     <h2>$cd &lt;adres&gt;</h2>
 
-        <p>Bu komut derleyeciye model materyallerin (3d modeller,dokular...) nerede olduğunu söyler .DOS komutu olan
+        <p>Bu komut derleyeciye model materyallerinin (3d modeller,dokular...) nerede olduğunu söyler. DOS komutu olan
         $cd ile aynıdır diyebiliriz.<br /> QC dosyası ile aynı klasörde olduğunu belirtmek için:</p>
 
         <div class="code"> $cd ".\"</div>
@@ -394,7 +357,7 @@
         
        <p> Hasar grupları sadece vurulan bölgenin hasar katsayısını belirlemez aynı zamanda modelin farklı bölgelerden vurulması veya öldürülmesi için farklı animasyonlar oynatmasını sağlar.
         <br />Son olarak, vurulma kutuları HLMV'nin en son çıkan sürümlerinde düzenlenilebilmektedir.</p>
-    </div>
+       </main>
 
     <footer>
     </footer>
