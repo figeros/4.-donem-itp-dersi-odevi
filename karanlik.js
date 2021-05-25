@@ -1,13 +1,14 @@
 
 
 function moddegis(){ 
-    var headline = document.getElementById("mod");
-    var tema = document.querySelector("main");;
-    if(headline.innerHTML == "Karanlık Mod")
+    var yazi = document.getElementById("mod");
+    var tema = document.querySelector("body");;
+    if(yazi.innerHTML == "Karanlık Mod")
 
-	    headline.innerHTML = "Aydınlık Mod";
+	    yazi.innerHTML = "Aydınlık Mod";
         
-        else headline.innerHTML = "Karanlık Mod";
+        else yazi.innerHTML = "Karanlık Mod";
  
     tema.classList.toggle("karanlik");
 }
+// sayfalar arası geçişte karanlık mod korunmuyor

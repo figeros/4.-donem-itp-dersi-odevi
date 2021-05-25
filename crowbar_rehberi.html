@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Crowbar Yazılımı Kullanım Rehberi - Figeros.net
+    </title>
+
+    <link rel="stylesheet" href="stil.css">
+    <script src="karanlik.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Figeros.net</h1>
+            <h2>CROWBAR YAZILIMI KULLANIM REHBERİ</h2>
+            <div class="butonlar">
+      
+              <a href="ana_menu.html"><button class="b_header">
+                <p>Ana Sayfa</p>
+              </button></a>
+      
+              <button class="b_header" onclick=moddegis()>
+                <p id="mod">Karanlık Mod</p>
+              </button>
+      
+            </div>
+        </div>  
+    </header>
+    <main>
+        
+        <p>Crowbar Goldsrc ve Source grafik motorları için decompile, compile işlemlerini yapma , model görüntüleme vb. işlemleri yapabileceğiniz ücretsiz bir yazılımdır. <a href=https://github.com/ZeqMacaw/Crowbar> Buradan</a> indirebilirsiniz.</p>
+        <p>Bu rehberde Crowbar yazılımının kullanımı anlatılacaktır.</p>
+        
+        <h2 class="yesil">Set Up Games</h2>
+
+            <img src="görsel\crwbr_1.png">
+
+            <p>Crowbar programında herhangi bir oyun için derleyeci, görüntüleyici ve paketleyici gibi özelliklere erişebilmek için belirli araçlara gereksinim vardır, crowbar otomatik olarak bu araçların yerini bulamaz, bu yüzden bunların yerini belirtmek gerekir, varsayılan olarak steam kütüphanesi adresi gösterilir</p>
+            
+            <p>The Preview, Pack, Compile, ve View  kısımları her biri Set Up Games butonuna sahiptir. Her biri aynı oyun listesine sahip iken her kısımda farkılı ayar değerleri bulunur</p>
+            
+            <h3 class="kirmizi">Oyun Seçme</h3> 
+
+                <p>En üstte hangi oyun için ayarlama yapacağınızı seçin.</p>
+            
+            <h3 class="kirmizi">Yeni Oyun Ekleme</h3> 
+                
+                <p>Add butonuna tıklayarak ayar yapmak üzere yeni bir oyun ekleyin</p>
+            
+            <h3 class="kirmizi">Oyun  Klonlama</h3> 
+
+                <p>Clone butonuna tıklayarak seçili oyunun aynı ayarlarına sahip yeni bir oyun ayarı oluşturun</p>
+            
+            <h3 class="kirmizi">"Create "models" folder tree from this game's VPKs" Butonu</h3> 
+
+                <p>Bir çok model göstericisi (HLMVler) .vpk dosyaları içinde bulunan modelleri bu dosya oyun dosyalarının bulunduğu dizinde değilse modeli gösteremez.Oyun içinde bulunan tüm .vpk dosyalarında bulunan "models" klasörünü okuması ve bu klasörleri oyun dosyaları içinde oluşturması için bu butona tıklayın.Bu şekilde sadece klasörler oluşur dosyalar ise oluşturulmaz</p>
+
+            <h3 class="kirmizi">Steam Kütüphanesi Klasörleri</h3> 
+
+                <p>Steam oyunlarınızın başka bir dizinde olması durumunda Preview ve View kısımlarının "Run Game" özelliğini kullanabilmeniz için bu dizini belirtmeniz gerekmektedir</p>
+                
+                <p>Add Macro butonuna tıklayarak yeni makro ekleyebilir, Browse butonuna tıklayarak da yeni dizin adresini belirtebilirsiniz.</p>
+                
+                <img src="görsel\crwbr_1.1.png">
+
+                <p>Eklenen makroya fare ile sağ tıklandığında:</p>
+
+                <ul>
+                    <li>Set macro in selected game setup(s): seçili olan oyun ya da oyunları mevcut makronun adresinde olduğu ayarını yapar.</li>
+
+                    <li>Clear macro in selected game setup(s): seçili olan oyun ya da oyunlardan mevcut makronun adresinde olduğu ayarını kaldırır.</li>
+
+
+                    <li>Change to this macro in selected game setup(s): seçili olan oyun ya da oyunlar başka bir makronun adresine ayarlıysa mevcut makronun adresinde değiştirirlir.</li>
+
+                    <li>Set macro in all game setups: Tüm oyunları makronun adresinde olduğu ayarını yapar.</li>
+
+                    <li>Clear macro in all game setups: Makronun adresine ayarlı tüm oyunları makrodan çıkartır.</li>
+
+                    <li>Change to this macro in all game setups: Diğer makroların adresine ayarlı tüm oyunları mevcut makronun adresine ayarlar.</li>
+
+                </ul>
+
+                <p>Bu ayarlamalar oyun dosyalarının yerini değiştirmez, Crowbar'a oyun dosyalarını hangi dizinde bulacağını söyler.</p>
+        
+        <h2 class="yesil">Download</h2>
+
+            <img src="görsel\crwbr_2.png">
+
+            <p>Steam Workshop üzerinden herhangi bir oyun için dosya indirmenizi sağlar. Dosyanın bulunduğu web adresi veya dosyanın IDsini "Item ID or link" kısmına yazmanız gerekiyor. "Output to" kısmında ise dosyaların hangi dizine indirileceği belirtiliyor. Daha sonra Download butonuna tıklayarak indirme işlemini başlatılıyor.</p>
+
+            <p>"Item ID or link" kısmına yazmak yerine kopyaladığınız ID ya da web adresini yapıştırabilirsiniz.</p>
+
+            <p>Crowbar ile sadece sahip olduğunuz oyunların workshop dosyaları indirilebilir.</p>
+
+            <p>Open butonuna tıkladığınızda ise girmiş olduğunuz ID veya web adresinin workshop sayfası açılır.</p>
+
+            <h3 class="kirmizi">Output File Name Options</h3> 
+
+                <p>Bu kısımdaki seçenekler dosyanız indirildiğinde isminin nasıl gözükeceğini belirler. Example output file name" kısmında örnek dosya adının nasıl olacağını görebilirsiniz.</p>
+
+                <p>"Convert to expected file or folder" seçeneği indirilen Garry's Mod dosyasını GMA dosyasına çevirir.</p>
+       
+        <h2 class="yesil">Unpack</h2>
+
+            <img src="görsel\crwbr_3.png">
+
+            <p>Crowbar herhangi Valve VPK  arşivini , Garry's Mod GMA, Vampire: The Masquerade - Bloodlines VPK, Tactical Intervention FPX ve Fairy Tale Busters APK paketlerini  çıkartabilir</p>
+
+            <h3 class="kirmizi">Arşiv seçme</h3> 
+
+                <p>Sadece 1 adet arşiv çıkarmak istiyorsanız "Packages:" yazısının sağında "File" seçeneğini seçip, browse kısmından da arşiv dosyasını seçerek;</p>
+
+                <p>Birden fazla arşiv çıkarmak istiyorsanız "Folder" seçeneğini, seçeceğiniz dizinin alt dizinindeki arşivlerin de dahil edilmesi için "Folder and subfolders" seçeneğini seçip, arşivlerin bulunduğu dizini seçerek arşiv kaynağını belirtebilirsiniz</p>
+
+            <h3 class="kirmizi">Arşiv çıktısı yeri belirlemesi</h3> 
+
+                <p>Same folder seçeneği arşivin(ler)in bulunduğu aynı dizine,</p>
+
+                <p>Subfolder seçeneği ile arşivlerin bulunduğu aynı dizine, ayrı bir klasöre,</p>
+
+                <p>Work folder seçeneği ile sizin belirteceğiniz bir klasöre çıkarılmasını ayarlayabilirsiniz. Yanındaki boşluğa adresi yazabilir, yapıştırabilir ya da Browse butonu ile istediğiniz dizini seçebilirsiniz.</p>
+
+            <h3 class="kirmizi">Arşiv içinde gezinme</h3> 
+
+                <p>"Contents of package" kısmında üstteki kutuda arşiv içinde bulunduğunuz yerin adresi, sol kutuda klasörler, sağ tarafta da seçili olan klasörün içeriği gözükmektedir</p>
+
+            <h3 class="kirmizi">Options</h3> 
+    
+                <h4 class="mavi">Write log to a file</h4>
+
+                    <p>İşlem sonunda arşivin çıkaırldığı yere çıkarma işlemiyle ilgili bir rapor yazar.</p>
+
+        <h2 class="yesil">Preview</h2>
+
+            <img src="görsel\crwbr_4.png">
+        
+            <p>Bu kısım model hakkında basit bilgi almak içindir.Buradan her oyunun kendi model göstericisine, harita yapıcısına veya oyunun kendisine erişebilir.</p>
+
+            <p>MDL file kısmındaki boşluğa incelemek istediğiniz modelin bilgisayarınızdaki adresini yazarak ya da browse tuşundan arayarak seçebilirsiniz.</p>
+
+            <h3 class="kirmizi">Info</h3> 
+
+                <p>Model seçtikten sonra Info kısmında model hakkındaki bilgileri alabilirsiniz. Bu kısımdaki bilgiler hata aramada yardımcı olabilir, örnek olarak sıklıkla karşılaşılan eksik doku sorunu için hangi doku dosyalarının gerektiğini öğrenip hatalı model ile karşılaştırma yapılabilir.</p>
+
+            <h3 class="kirmizi">Game that has the model viewer</h3> 
+
+                <p>Farkılı model göstericilerin farklı oyun ve oyun motorları için farklı özellikleri olabilir. Buradan hangi oyun model göstericisini kullanacağınızı seçin.</p>
+
+
+            <h3 class="kirmizi">View, View as Replacement, Use in Decompile</h3> 
+
+                <p>Sol alt köşedeki "View" butonuna tıklamak seçilen modeli görmek için bir model gösterici açar.</p>
+
+                <p>Oyunda kullanılan aynı isimde bir model seçtiyseniz "View As Replacement" butonuna tıklayın. Bu durumda Crowbar yapması sıkıcı olan bir takım işleri arka planda halleder.</p>
+
+                <p>"Use in Decompile" butonu seçili modeli decompile işlemi yapmak için Decompile kısmına yönlendirir</p>
+
+            <h3 class="kirmizi">Open Viewer, Open Mapper, Run Game</h3> 
+
+                <p>"Open Viewer" butonuna tıklamak herhangi bir model yüklemeden model göstericiyi açar.Crowbarı kapatmak model göstericileri de kapatır.</p>
+
+                <p>"Open Mapper" butonuna tıklamak harita yapıcısını (genellikle Hammer programı) açar.Crowbarı kapatmak aynı şekilde harita yapıcısını da kapatır.</p>
+
+                <p>"Run Game" butonu oyunu açar.</p>
+
+        <h2 class="yesil">Decompile</h2>
+
+            <img src="görsel\crwbr_5.png">
+
+            <h3 class="kirmizi">MDL input</h3> 
+
+                <p>Buraya adresi yazarak, adresi yapıştırarak ya da "Browse" butonundan modeli seçerek, birden fazla model için modellerin bulunduğu klasörü seçerek hangi modellere decompile işlemi uygulanacağı seçilir. Goto butonu ile seçili dosya ya da klasörün bulunduğu klasör Windows Dosya Gezgini ile açılır.</p>
+
+            <h3 class="kirmizi">Output to</h3> 
+
+                <p>Work folder seçeneğinde decompile işlemi sonunda oluşturulan dosyalar sizin belirteceğiniz bir klasörde depolanır. Yanındaki boşluğa adresi yazabilir, yapıştırabilir ya da Browse butonu ile istediğiniz dizini seçebilirsiniz.</p>
+
+                <p>Subfolder seçeneği ise dosyaları seçili modelin veya klasörun bulunduğu dizinde ayrı bir klasöre çıkartır</p>
+
+                <p>Goto butonu ile seçili dosya ya da klasörün bulunduğu klasör Windows Dosya Gezgini ile açılır.</p>
+
+            <h3 class="kirmizi">Re-Create Files</h3> 
+
+                <p>Bu kısımda decompile işleminde hangi dosyaların çıkarılacağı ayarlanır.</p>
+
+                <h4 class="mavi">QC file</h4>
+
+                    <p>Seçildiğinde model için .qc dosyası oluşturulur</p>
+
+                <h4 class="mavi">Group into QCI files</h4>
+
+                    <p>Seçildiğinde komutlar gruplandırılır, hepsi tek bir .qc dosyasına yazılmaz.</p>
+
+                <h4 class="mavi">Each $texturegroup skin-family on single line</h4>
+
+                    <p>Seçildiğinde modelin her bir doku dosyası için .qc dosyasında ayrı komut satırı yazılır</p>
+
+                <h4 class="mavi">Only changed materials in $texturegroup lines</h4>
+
+                    <p>Unchecked = write all materials for each skin-family as stored in the MDL file</p>
+
+                    <p>Checked = write only the materials than change between skin-families</p>
+
+                <h4 class="mavi">Include $definebone lines (typical for view models)</h4>
+
+                    <p>Seçildiğinde .qc dosyasına $definebone komutlarını ekler.</p>
+
+                <h4 class="mavi">Texture BMP files (GoldSource)</h4>
+
+                    <p>Seçildiğinde modelin doku dosyaları çıkartılır.</p>
+
+                <h4 class="mavi">LOD mesh SMD files</h4>
+
+                    <p>Seçildiğinde Level of Detail model dosyaları çıkartılır.</p>
+                
+                <h4 class="mavi">Physics mesh SMD file</h4>
+
+                    <p>Seçildiğinde Physics model dosyaları çıkartılır.</p>
+                
+                <h4 class="mavi">Vertex animation VTA file (face flexes)</h4>
+
+                    <p>Seçildiğinde modelin yüz hareketleri için olan VTA dosyası çıkartılır.</p>
+            
+                <h4 class="mavi">Procedural bones VRD file</h4>
+
+                    <p>Seçildiğinde VRD dosyası çıkartılır (Source motoru için)</p>
+
+                <h4 class="mavi">Bone animation SMD files</h4>
+
+                    <p>Seçildiğinde modelin animasyon dosyalarını da çıkartır.</p>
+
+                <h4 class="mavi">Place in "anims" subfolder</h4>
+
+                    <p>Seçildiğinde animasyon dosyalarını diğerleriyle aynı klasöre çıkarmak yerine aynı dizinde "anims" adlı bir klasöre çıkartır.</p>
+
+            <h3 class="kirmizi">"Use Defaults" button</h3>         
+            
+                <p>Bu butona tıklamak ayarları varsayılana ayarlara geri çevirir.</p>
+            
+            <h3 class="kirmizi">Options</h3> 
+
+                <h4 class="mavi">Folder for each model</h4>
+
+                    <p>Seçildiğinde her 3d modeli ayrı klasöre çıkartır.</p>
+
+                <h4 class="mavi">Prefix mesh file names with model name</h4>
+
+                    <p>Seçildiğinde modelle aynı isme sahip 3d modellere karışıklık olmaması için ön ad ekler</p>
+
+                <h4 class="mavi">Format for stricter importers</h4>
+
+                    <p>Seçildiğinde dosyalar eski araçlar tarafından kullanılan formatta yazılır. Kullanıcı tarafından okunabilirliği daha azdır.</p>
+
+                <h4 class="mavi">Write log to a file</h4>
+
+                    <p>Seçildiğinde işlem sonunda işlem hakkında bir rapor dosyası oluşturur.</p>
+
+                <h4 class="mavi">Decompile-info comments and files</h4>
+
+                    <p>Seçildiğinde dosya içine yazılan yorumları da çıkarır.</p>
+        <h2 class="yesil">Compile</h2>
+
+            <img src="görsel\crwbr_6.png">
+
+            <p>Crowbar kendi başına model derleyemez, derleme işlemini yapması için studiomdl derleyicisini çağırır.Bu yüzden derlemek istediğiniz modelin oyununun derleyicisine sahip olmanız gerekmektedir.</p>
+
+            <h3 class="kirmizi">QC input</h3> 
+
+                <p>Buraya adresi yazarak, adresi yapıştırarak ya da "Browse" butonundan .qc dosyasını seçerek, birden fazla .qc dosyası için için bu dosyaların bulunduğu klasörü seçerek hangi dosyalar kullanılarak  derleme işleminin yapılacağı seçilir. Goto butonu ile seçili dosya ya da klasörün bulunduğu klasör Windows Dosya Gezgini ile açılır.</p>
+
+            <h3 class="kirmizi">Output to</h3> 
+
+                <p>Work folder seçeneğinde derleme(compile) işlemi sonunda oluşturulan model sizin belirteceğiniz bir klasörde depolanır. Yanındaki boşluğa adresi yazabilir, yapıştırabilir ya da Browse butonu ile istediğiniz dizini seçebilirsiniz.</p>
+
+                <p>Subfolder seçeneği ise modeli seçili .qc dosyasının bulunduğu dizinde ayrı bir klasöre çıkartır</p>
+
+            <h3 class="kirmizi">Options</h3> 
+
+                <p>"Game that has the model compiler" kısmından hangi oyunun derleyicisi (genellikle studiomdl) seçilir.</p>
+
+                <h4 class="mavi">Write log to a file</h4>
+
+                    <p>Seçildiğinde derleme işlemi sonunda bir rapor dosyası oluşturulur</p>
+
+                <h4 class="mavi">Direct entry of command-line options (in case they are not included above) </h4>
+
+                    <p>Buraya üst kısımda belirtilmemiş derleyici komutları yazılır.</p>
+
+                <p>En alttaki kutucukta ise Crowbarın derleyiciye gönderdiği arka plan komutları gösterilir.</p>
+
+        <h2 class="yesil">View</h2>
+
+            <img src="görsel\crwbr_7.png">
+
+            <p>Bu kısım Preview kısmıyla aynı özelliklere sahip,aynı anda 2 modeli inceleyebilmek için oluşturuldu.</p>
+
+        <h2 class="yesil">Pack</h2>
+
+            <img src="görsel\crwbr_8.png">
+
+            <p>Bir klasörü Valve VPK ya da Garry's Mod GMA arşivine çeivir.GMA dosyasına çevirebilmeniz için addon.json dosyasına ihtiyacınız vardır.</p>
+    
+    </main>
+    <footer>
+    </footer>
+
+</body>
+
+</html>

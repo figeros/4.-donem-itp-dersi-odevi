@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        QC dosyası komutları rehberi
+        QC Dosyası Komutları Rehberi - Figeros.net
     </title>
 
     <link rel="stylesheet" href="stil.css">
@@ -13,12 +13,21 @@
 
 <body>
     <header>
-        <h1>Figeros.net</h1>
-        <h2>QC KOMUTLARI REHBERİ</h2>
-        <div class="butonlar">
-                <p onclick=location.href="ana_menu.html">Ana Sayfa</p>
-                <p id="mod" onclick=moddegis()>Karanlık Mod</p>
-        </div>
+        <div>
+            <h1>Figeros.net</h1>
+            <h2>QC KOMUTLARI REHBERİ</h2>
+            <div class="butonlar">
+      
+              <a href="ana_menu.html"><button class="b_header">
+                <p>Ana Sayfa</p>
+              </button></a>
+      
+              <button class="b_header" onclick=moddegis()>
+                <p id="mod">Karanlık Mod</p>
+              </button>
+      
+            </div>
+          </div>  
     </header>
     <main>
     <p>.qc dosyaları herhangi bir modelin özelliklerini tanımlayan dosyadır. Studiomdl derleyecisi bu dosya içindeki
@@ -27,7 +36,7 @@
         <p>Komutların küçük karakterler ile yazıldığına dikkat edilmesi gerekiyor aksi takdirde derleyeci hata verecektir.
         </p>
 
-    <h2>QC dosyasına yorum bırakma</h2>
+    <h2 class="yesil">QC dosyasına yorum bırakma</h2>
 
         <p>Yorum yapacağınız satırın başına // koyarak ya da yorumunuzun başına /*, sonuna da */ koyarak yorum
         yapabilirsiniz.</p>
@@ -40,14 +49,14 @@
         buradakilerin hepsi birer yorum
         */</div>
 
-    <h2>$modelname &lt;model adı&gt;.mdl</h2>
+    <h2 class="yesil">$modelname &lt;model adı&gt;.mdl</h2>
 
         <p>Derleyeciye modele ne ad vereceğini söyler.</p>
 
         <div class="code">$modelname bombaci_osman.mdl</div>
     
     
-    <h2>$cd &lt;adres&gt;</h2>
+    <h2 class="yesil">$cd &lt;adres&gt;</h2>
 
         <p>Bu komut derleyeciye model materyallerinin (3d modeller,dokular...) nerede olduğunu söyler. DOS komutu olan
         $cd ile aynıdır diyebiliriz.<br /> QC dosyası ile aynı klasörde olduğunu belirtmek için:</p>
@@ -62,7 +71,7 @@
 
         <div class="code">$cd "C:\modeller\bombaci_osman\materyaller"</div>
     
-    <h2>$cdtexture &lt;adres&gt;</h2>
+    <h2 class="yesil">$cdtexture &lt;adres&gt;</h2>
         <p>Bu komut eğer doku dosyaları model dosyalarından farklı bir adreste ise kullanılır</p>
 
         <div class="code">$cdtexture ".\osman_ayakkabi.bmp"</div>
@@ -71,7 +80,7 @@
 
         <div class="code">$cdtexture "C:\Modeller\bombaci_osman\materyaller\osman_ayakkabi.bmp"</div>
     
-    <h2> $cliptotextures</h2>
+    <h2 class="yesil"> $cliptotextures</h2>
 
         <p>Studiomdl derleyecisi varsayılan olarak doku dosyalarını optimize etmek amacıyla, doku kenarında
         kullanılmayan yerleri kırpar ve sınırları kırpılan yerlere göre değiştirir. Fakat bu model üzerinde
@@ -83,7 +92,7 @@
 
         <div class="code">$cliptotextures</div> 
     
-   <h2> $scale &lt;değer&gt; </h2>
+   <h2 class="yesil"> $scale &lt;değer&gt; </h2>
     
         <p>Bu komutu $body veya $sequence komutlarından önce koyarsanız bu komut tüm
         modelin boyutunu değiştirir. Modelin varsayılan büyüklüğü 1.0 dır. Modeli büyütmek için örnek:</p>
@@ -94,7 +103,7 @@
         
         <p>Bu komut QC dosyası içinde farklı yerlerde ve birden fazla kez kullanılabilir.</p>
         
-    <h2> $texrendermode &lt;doku adı&gt;.bmp &lt;işleme modu&gt; </h2>
+    <h2 class="yesil"> $texrendermode &lt;doku adı&gt;.bmp &lt;işleme modu&gt; </h2>
 
         <p>Bu komut belirtilen dokular için işleme (render) modlarını seçer. Eğer aynı doku üzerinde birden
         fazla mod bulunacaksa bunun ayrı satırlarda belirtilmesi gerekir.</p>
@@ -103,7 +112,7 @@
         $texrendermode "glasses.bmp" chrome<br />
         $texrendermode "glasses.bmp" additive</div>
 
-    <h2>$gamma &lt;değer&gt; </h2>
+    <h2 class="yesil">$gamma &lt;değer&gt; </h2>
 
         <p>İsteğe bağlı olan bu komut doku üzerindeki kontrastı değiştirmek için kullanılır. Varsayılan
         değeri 1.8'dir.Dokuyu daha karanlık yapmak için gamma değerini yükseltin, daha aydınlık yapmak
@@ -111,7 +120,7 @@
 
         <div class="code">$gamma 2.0</div>
 
-    <h2> $origin &lt;X&gt;&lt;Y&gt;&lt;Z&gt;&lt;Dönme açısı&gt;</h2>
+    <h2 class="yesil"> $origin &lt;X&gt;&lt;Y&gt;&lt;Z&gt;&lt;Dönme açısı&gt;</h2>
 
         <p>Bu isteğe bağlı komut ile X Y Z koordinatları kullanılarak modelin pozisyonu ve
         animasyonlarını doğrultmak için kullanılır. Burada belirtilen değerler modelin
@@ -127,7 +136,7 @@
        <div class="code">$origin 0 0 0 180</div>
 
 
-    <h2>$eyeposition</h2>
+    <h2 class="yesil">$eyeposition</h2>
 
         <p>Oyuncu dışı varlıkların gözlerinin model üzerinde nerede olduğunu belirtmek için kullanılır.
         Oyun yapayzekası bu göz pozisyonunu varlığın oyuncuyu ya da diğer varlıkları nereden göreceğini 
@@ -135,7 +144,7 @@
          
         <div class="code">$eyeposition 0 0 63</div>
 
-    <h2>$body &lt;3d model adı&gt;</h2>
+    <h2 class="yesil">$body &lt;3d model adı&gt;</h2>
 
         <p>Bu komut modelin kullanacağı referans 3d modeli tanımlar.
         <br />Örnek olarak:</p>
@@ -146,7 +155,7 @@
         Bu şekilde sadece 3d modelin boyutunu değiştirir, modelin iskeletine etki etmez.</p>
         <div class="code">$body studio "b_osman_model" scale 1.5</div>
 
-    <h2>$bodygroup &lt;bodygroup adı&gt; {bodygroup için değiştirilebilir 3d model adları}</h2>
+    <h2 class="yesil">$bodygroup &lt;bodygroup adı&gt; {bodygroup için değiştirilebilir 3d model adları}</h2>
 
         <p>Bu komut model üzerindeki değiştirilebilir 3d modelleri tanımlar.
         Buna Half Life Scientist npc'lerinin kafalarını değiştirmek ve npclerin elindeki silah modellerini değiştirmek örnek gösterilebilir. 
@@ -171,7 +180,7 @@
         }</div>
 
     
-    <h2>$texturegroup &lt;3d model adı&gt; {.bmp doku grupları }</h2>
+    <h2 class="yesil">$texturegroup &lt;3d model adı&gt; {.bmp doku grupları }</h2>
 
         <p>Bu komut model üzerindeki değişebilir dokuları tanımlar.
         Çoğunlukla ten rengi veya kıyafet çeşitliliğini sağlamak için kullanılır.
@@ -185,7 +194,7 @@
         { "newarm(dark).bmp" "handback(dark).bmp" "helmet(dark).bmp" }<br />
         }</div>
 
-    <h2>$renamebone &lt;adı değiştirlecek kemik&gt; &lt;yeni ad&gt;</h2>
+    <h2 class="yesil">$renamebone &lt;adı değiştirlecek kemik&gt; &lt;yeni ad&gt;</h2>
 
         <p>Bu isteğe bağlı komut ile model iskeletinin herhangi bir kemiği yeniden adlandırılabilir.
         Çoğunlukla iskeletin model veya animasyonlarla olan isim farklılıklarını düzeltmek için kullanılır. 
@@ -193,7 +202,7 @@
         
         <div class="code">$renamebone "Bip01 R Calf" "Bip01 R Leg1"</div>
 
-    <h2>$mirrorbone &lt;simetrisi oluşturulacak kemik&gt;</h2>
+    <h2 class="yesil">$mirrorbone &lt;simetrisi oluşturulacak kemik&gt;</h2>
         
         <p>Bu isteğe bağlı komut herhangi bir kemiği Z ekseninde simetrik kopyasını oluşturur.
         Bu aynı zamanda o kemiğe bağlı (evlat edilen) diğer kemiklere de etki eder.
@@ -201,7 +210,7 @@
         
         <div class="code">$mirrorbone "propbase"</div>
 
-    <h2>$include &lt;.qc dosyasının adı &gt;</h2>
+    <h2 class="yesil">$include &lt;.qc dosyasının adı &gt;</h2>
 
         <p>Bu komut eğer başka bir .qc dosyası dahil edilecekse kullanılır.
         Ortak kullanılan komutları bu şekilde bağlamak kullanışlı olabilir.
@@ -213,7 +222,7 @@
         
         <div class="code">$include "C:\modeller\ortak\hitboxes.qc"</div>
 
-    <h2>$attachment &lt; sıra numarası &gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt;</h2>
+    <h2 class="yesil">$attachment &lt; sıra numarası &gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt;</h2>
 
         <p>Silah ateşi veya kovan atma noktaları gibi yerleri belirtmek için belirtilen kemik üzerinde bir nokta tanımlar.
         Her model için limit 4'tür. Tanımlama sayıları 0dan başlayıp 3e kadar gider. 
@@ -223,7 +232,7 @@
         
         <div class="code">$attachment 0 "bip01 R hand" 25 0 5</div>
 
-    <h2>$hbox &lt;hasar grup numarası&gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;X2&gt; &lt;Y2&gt; &lt;Z2&gt;</h2>
+    <h2 class="yesil">$hbox &lt;hasar grup numarası&gt; &lt;"kemik adı"&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;X2&gt; &lt;Y2&gt; &lt;Z2&gt;</h2>
         
         <p>Studiomdl varsayılan olarak $hbox satırının olup olmadığını kontrol eder, eğer yoksa modele göre kendisi otomatik olarak vurulma kutusu oluşturur.
         Komut kullanıldığında sadece satırlarda belirtilen kemikler için vurulma kutusu oluşturulur.

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      Figeros.net - Goldsrc motoru için rehberler
+      Figeros.net - Goldsrc Motoru İçin Rehberler
     </title>
 
   <link rel="stylesheet" href="stil.css">
@@ -14,16 +14,26 @@
       flex-direction: row;
     }
 
-    .kısım {
+    .sütun {
       display: flex;
       flex-direction: column;
+      width: 50%; 
+      margin: 10px;
     }
 
-    .kısım div {
+
+    body.karanlik .b_menu {
+      background: #444444;
+      color: white;
+    }
+
+    .b_menu {
+      border: none;
       background: #dddddd;
-      padding: 10px;
-      width: 10 px;
-      margin: 10px;
+      font-size: 16px;
+      color: black; 
+      font-family: Verdana;
+      margin-bottom: 20px;
     }
   </style>
 
@@ -32,31 +42,45 @@
 
 <body>
   <header>
-    <h1>Figeros.net</h1>
-    <div class="butonlar">
-      <p onclick=location.href="ana_menu.html">Ana Sayfa</p>
-      <p id="mod" onclick=moddegis()>Karanlık Mod</p>
-    </div>
+    <div>
+      <h1>Figeros.net</h1>
+      <div class="butonlar">
+
+        <a href="ana_menu.html"><button class="b_header">
+          <p>Ana Sayfa</p>
+        </button></a>
+
+        <button class="b_header" onclick=moddegis()>
+          <p id="mod">Karanlık Mod</p>
+        </button>
+
+      </div>
+    </div>  
 </header>
 <main>
 <p>Bir rehber seçiniz</p>
 <div class="bütün">
-  <div class="kısım" >
-    <div>
-      <h3><a href="qc_komutlari_rehberi.html">QC Dosyası Komutları Rehberi</a></h3>
+  <div class="sütun" >
+
+    <a href="qc_komutlari_rehberi.html"><button class="b_menu">
+      <h3>QC Dosyası Komutları Rehberi</h3>
       <p>Model derlemede kullanılan .qc dosyası türü için örnekli komut açıklamaları</p>
-    </div>
-    <div>
-      <h3><a href=>HLMV Kullanım Rehberi</a></h3>
+    </button></a>
+
+    <a href=><button class="b_menu">
+      <h3>HLMV Kullanım Rehberi</h3>
       <p>Half-Life Model Viewer üzerinde model ve animasyon gösterimi, decompile/compile özellikleri</p>
-    </div>
+    </button></a>
+  
   </div>
 
-  <div class="kısım">
-    <div>
-      <h3><a href=>Crowbar Programı Kullanımı Rehberi</a></h3>
-      <p>Crowbar uygulamasında derleyeci belirleme, decompile/compile işlemlerini yapma</p>
-    </div>
+  <div class="sütun">
+
+    <a href="crowbar_rehberi.html"><button class="b_menu">
+      <h3>Crowbar Yazlımı Kullanım Rehberi</h3>
+      <p>Crowbar uygulamasının decompile, compile,unpack vb. özelliklerinin anlatımı</p>
+    </button></a>
+    
   </div>
 </div>
 
