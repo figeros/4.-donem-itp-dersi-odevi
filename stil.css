@@ -30,7 +30,7 @@ header > div {
     justify-content: space-between;
 }
 
-.b_header {
+.b_header1,.b_header2 {
     color: white;
     background-color:  #ff6c33;  
   }
@@ -90,7 +90,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* buraya tekrar bakacağım*/
 }
 
 button {

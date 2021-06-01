@@ -1,14 +1,33 @@
+window.onload = function () {
+    var btn = document.querySelector(".b_header2");
+    btn.addEventListener("click", moddegis);
 
-
-function moddegis(){ 
+    var eskitema = localStorage.getItem("mtema");
     var yazi = document.getElementById("mod");
-    var tema = document.querySelector("body");;
-    if(yazi.innerHTML == "Karanlık Mod")
+    var tema = document.querySelector("body");
 
-	    yazi.innerHTML = "Aydınlık Mod";
+    if(eskitema == "Karanlık Mod"){
+       // document.body.classList.add("karanlik");
+       tema.classList.toggle("karanlik");
+        yazi.innerHTML = "Aydınlık Mod";
+    }
         
-        else yazi.innerHTML = "Karanlık Mod";
+    
+
+    function moddegis(){ 
+        
+        if(yazi.innerHTML == "Karanlık Mod"){
+
+            localStorage.setItem("mtema", yazi.innerHTML);
+	        yazi.innerHTML = "Aydınlık Mod"; }
+
+        else {
+            localStorage.setItem("mtema", yazi.innerHTML);
+            yazi.innerHTML = "Karanlık Mod";
+                    
+        }
  
-    tema.classList.toggle("karanlik");
+        tema.classList.toggle("karanlik");
+    }
 }
 // sayfalar arası geçişte karanlık mod korunmuyor
