@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        HLMV Kullanım Rehberi - Figeros.net
+    </title>
+
+    <link rel="stylesheet" href="../../stil.css">
+    <script src="../../karanlik.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Figeros.net</h1>
+            <h2>HLMV YAZILIMI KULLANIM REHBERİ</h2>
+            <div class="butonlar">
+      
+              <a href="../../ana_menu.html"><button class="b_header1">
+                <p>Ana Sayfa</p>
+              </button></a>
+      
+              <button class="b_header2">
+                <p id="mod">Karanlık Mod</p>
+              </button>
+      
+            </div>
+        </div>  
+    </header>
+    <main>
+        
+        <p>Half Life Model Viewer kısa adıyla HLMV, GoldSrc oyunlarının .mdl modellerini görüntülemeye yarayan bir yazılımdır. <a href=https://github.com/Solokiller/HL_Tools/releases/tag/HLMV-V2.10>Buradan</a> indirebilirsiniz.</p>
+        <p>Bu rehberde HLMV yazılımının kullanımı anlatılacaktır.</p>
+        
+        <h2 class="yesil">Model Açma</h2>
+            
+            <p>Sol üst köşedeki File butonundan "Load Model" butonuna tıklayarak istediğimiz modeli seçiyoruz.
+            
+        
+            <p>Load Previous Model ve Load Next Model seçenekleri ise açtığımız modelin bulunduğu dizindeki alfabetik sıraya göre bir önceki ya da sonraki modeli acaktır.</p>
+        
+        <h2 class="yesil">Arkaplan/Zemin Ekleme</h2>
+
+            <p>Modeli görüntülerken eğer örnek fotoğraf hazırlamak gibi bir amacımız varsa sol üst köşedeki File butonundan Load Background Texture seçeneği ile arka plan resmi, Load Ground Texture seçeneği ile de zemin resmini değiştirebiliyoruz.</p>
+
+            <p>Seçtiğimiz zemin resmini silmek için ise aynı menüden Unload Ground Texture Butonuna tıklıyoruz.</p>
+        
+        <h2 class="yesil">Modeli Kaydetme</h2>
+        
+            <p>Model üzerinde yaptığımız değişikleri kaydetmek istediğimizde ise File menüsünde Save Model As seçeneği ile isteğe bağlı olarak mevcut modelin üstüne veya ayrı model olarak kaydediyoruz.</p>
+    
+        <h2 class="yesil">Kamerayı Varsayılan Hale Getirme</h2>
+
+            <p>Kameranın  başlangıç pozisyona dönmesi için sol üst köşedeki View butonundan Center View seçeneğine tıklıyoruz.</p> 
+
+        <h2 class="yesil">Derleyici Seçme</h2>
+
+            <p>HLMV compile/decompile işlemleri için gereksinim duyduğu  derleyiciyi kendisi bulamaz,uygulama ayarlarından derleyicinin yeri belirtilmelidir.HLMV Crowbar'ın aksine modellere decompile işlemi yapabilmesi için ayrı çözücü programa ihtiyacı vardır.</p>
+
+            <p>Sol üst köşedeki Tools menüsünden Options seçeneğine tıklayarak ayarlar sekmesini açıyoruz. Compiler kısmından "Path to 'studiomdl.exe' " kısmına derleyicimizi, "Path to 'mdldec.exe' " ile de çözücümüzün yerini belirtiyoruz. Daha sonra da OK butonu ile yaptığımız değişiklikleri kaydediyoruz.</p>
+
+        <h2 class="yesil">Modelde Compile ve Decompile İşlemleri Yapma</h2>
+
+            <p>Tools menüsünden Compile Model ve Decompile Model seçenekleri ile derleme ve çözme işlemlerimizi yapıyoruz.</p>
+
+            <p>HLMV'de compile ve decompile özellikleri bulunmasına rağmen kullanım kolaylığı için crowbar benzeri bir programın kullanılması daha iyi olacaktır.</p>
+
+        <h2 class="yesil">Modeli Döndürme</h2>
+
+            <p>Farenizin sol tuşunu basılı tutup ekranda sürükleyerek modelinizi döndürebilirsiniz.</p>
+
+        <h2 class="yesil">Modeli Yakınlaştırma Uzaklaştırma</h2>
+
+            <p>Farenizin sağ tuşunu basılı tutup ekranda ileri/geri sürükleyerek modelinizi yakınlaştırıp uzaklaştırabilirsiniz.</p>
+
+        <h2 class="yesil">Modeli Taşıma</h2>
+
+            <p>Shift ve farenizin sol tuşunu basılı tutup ekranda sürükleyerek modelinizi taşıyabilirsiniz.</p>
+
+        <h2 class="yesil">Işığın Yönünü Değiştirme</h2>
+
+            <p>Ctrl ve ve farenizin sol tuşunu basılı tutup ekranda sürükleyerek model üzerine vuran ışığın yönünü değiştirebilirsiniz. Işık yönünü sıfırlamak için sol alt köşedeki "Reset Light Vektor" butonuna tıklayın.</p>
+
+        <h2 class="yesil">View Origin</h2>
+
+            <img src="görsel\hlmv_0.png"> 
+            <p class="aciklama">Solda modelin Free View moduyla, Sağda modelin Weapon Origin moduyla gösterimi</p>       
+
+            <p>Free View butonu serbest kamera moduna geçerken, Weapon Origin butonu silahların birincil bakış modellerini görüntülemek için olan sabit kamera moduna geçer.</p>
+
+        <h2 class="yesil">Model Display</h2>
+
+            <img src="görsel\hlmv_1_0.png">
+
+            <h3 class="kirmizi">Render mode</h3>
+
+                <p>Modelinizi farklı seçeneklerle modelinizin görüntülenme modunu değiştirebilirsiniz. Wireframe seçeneği ile sadece vertexler gözükecek şekilde, Flat Shaded ve Smoot Shaded seçenekleri ile dokusuz şekilde ve Texture Shaded seçeneği ile doku uygulanmış şekilde görüntüleyebilirsiniz.</p>
+
+            <h3 class="kirmizi">Opacity</h3>
+
+                <p>Bu seçenek modelin görüntü saydamlığını değiştirir.</p>
+            
+            <hr /> <br />
+
+            <img src="görsel\hlmv_1_1.png">
+            <p class="aciklama">Sırasıyla Show Hit Boxes, Show Bones, Show Attachments, Show Eye Position seçeneklerinin gösterimi</p>
+
+            <h3 class="kirmizi">Show Hit Boxes</h3>
+
+                <p>Seçildiğinde modelin Vurulma kutularını gösterir.</p>
+
+            <h3 class="kirmizi">Show Bones</h3>
+
+                <p>Seçildiğinde modelin kemiklerini gösterir.</p>
+
+            <h3 class="kirmizi">Show Attachments</h3>
+
+                <p>Seçildiğinde modelin attachment noktalarını gösterir.</p>
+
+            <h3 class="kirmizi">Show Eye Position</h3>
+
+                <p>Seçildiğinde modelin göz noktalasını gösterir.</p>
+
+            <h3 class="kirmizi">Backface Culling</h3>
+
+                <p>Seçildiğinde tek tarafı boyanmış meshlerin boyanmamış tarafından bakıldığında bu kısmı boyanmış kısmıyla aynı dokuya sahip göstermek yerine görünmez yapar.</p>
+
+            <hr /> <br />
+            
+            <img src="görsel\hlmv_1_2.png">
+            <p class="aciklama">Sırasıyla Show Ground, Mirror Model On Ground, Show Background seçeneklerinin gösterimi</p>
+
+            <h3 class="kirmizi">Show Ground</h3>
+
+                <p>Seçildiğinde ekrana zemin ekler, daha önceden herhangi bir zemin yüklü değilse HLMV saydam beyaz bir zemin yerleştirir.</p>
+
+            <h3 class="kirmizi">Mirror Model On Ground</h3>
+
+                <p>Seçildiğinde eklenmiş zeminde modelin yansımasını oluşturur.</p>
+
+            <h3 class="kirmizi">Show Background</h3>
+
+                <p>Seçildiğinde ekrana arka plan ekler, eğer herhangi bir arka plan yüklü değilse HLMV kendisi bir arka plan yerleştirmez.</p>
+
+            <hr /> <br />
+
+            <img src="görsel\hlmv_1_3.png">
+            <p class="aciklama">Sırasıyla Wireframe Overlay, Draw Shadows, Fix Shadow Z Fighting, Show Axes seçeneklerinin gösterimi</p>
+            
+            <h3 class="kirmizi">Wireframe Overlay</h3>
+
+                <p>Seçildğinde model üzerindeki vertexleri gösterir. Render Mode seçeneğindeki Wireframe modundan farkı, bu seçeneğin diğer modlarda iken kullanılabilmesidir.</p>
+
+            <h3 class="kirmizi">Draw Shadows</h3>
+
+                <p>Seçildiğinde model gölgesi çizilir.</p>
+
+            <h3 class="kirmizi">Fix Shadow Z Fighting</h3>
+
+                <p>Seçildiğinde eğer modelin gölgesinde titreme sorunu varsa bu düzeltilir.</p>
+
+            <h3 class="kirmizi">Show Axes</h3>
+
+                <p>Seçildiğinde ekranda XYZ eksen oklarını gösterir.</p>
+
+            <hr /> <br />
+
+            <img src="görsel\hlmv_1_4_1.png">
+            <p class="aciklama">Sırasıyla Show Normals, Show Player Hitbox seçeneklerinin gösterimi</p>
+
+            <h3 class="kirmizi">Show Normals</h3>
+
+                <p>Seçildiğinde  model üzerinde vertexlerin kesiştiği noktalar olan ve model üzerine vuran ışığın simule edilmesi için kullanılan vertex normallerini gösterir.</p>
+
+            <h3 class="kirmizi">Show Player Hitbox</h3>
+
+                <p>Seçildiğinde ekrana mevcut modelle karşılaştırmak üzere oyuncu vurulma kutusunu yerleştirir.</p>
+
+            <h3 class="kirmizi">Show Crosshair</h3>
+
+                <p>Seçildiğinde ekrana birincil bakış silah modelleri için kullanılan nişangah yerleştirir.</p>
+
+            <img src="görsel\hlmv_1_4_2.png">
+
+            <h3 class="kirmizi">Show Crosshair</h3>
+
+                <p>Seçildiğinde birincil bakış silah modellerinin oyunda ekrana nasıl sığdığını göstermek için bir kutu yerleştirir.</p>
+
+            <img src="görsel\hlmv_1_4_3.png">
+
+            <h3 class="kirmizi">Mirror on axis</h3>
+
+                <p>Seçildiğinde modeli seçildiği eksende yansıtır.</p>
+
+            <h3 class="kirmizi">Field of View ve First Person FOV</h3>
+
+                <p>Field of View serbest kameranın görme açısını değiştirirken, First Person Field of View daha önce  bahsi geçen birincil bakış silah modelleri için olan sabit kameranın görme açısını değiştirir. Set FOV modele bu görme açısını kaydederken Default butonu ise açı değerlerini varsayılana geri çevirir.</p>
+
+        <h2 class="yesil">Model Data</h2>
+
+            <img src="görsel\hlmv_2.png">
+
+            <h3 class="kirmizi">Origin</h3>
+
+                <p>Bu kısımda modelin merkez noktasına göre konumu değiştirilir.</p>
+
+            <h3 class="kirmizi">Scale Mesh/Bones</h3>
+
+                <p>Bu kısımda modelin iskeleti ve meshleri girilen değer ile büyütülür. 2.00 değeri modelin boyutunu 2 katına çıkarırken 0.50 değeri modelin boyutunu yarıya indirir.</p>
+
+        <h2 class="yesil">Global Flags</h2>
+
+            <p>Bu kısım modellere nadiren kullanılan görsel efektler eklemek içindir.</p>
+
+        <h2 class="yesil">Body Parts</h2>
+
+            <img src="görsel\hlmv_3.png">
+
+            <h3 class="kirmizi">Part, Sub-model ve Skin</h3>
+
+                <p>Half-Life Scientist modeli gibi mesh ve doku grubu olan modele sahip iseniz bu kısımda bu grupları ve grup parçalarını inceleyebilirsiniz. Part seçeneğinden mevcut grupları seçip bu grupların doku veya 3d modelini değiştirebilirsiniz.</p>
+
+        <h2 class="yesil">Bones</h2>
+
+            <img src="görsel\hlmv_4.png">
+
+            <p>Burada modelin mevcut kemikleri ve varsa bu kemiklere bağlı kontrolcüler görüntülenebilir. Kontrolcüler npclerin ağız hareketleri , oyuncuya kafalarını çevirmeleri gibi olayları gerçekleştirmesini sağlar</p>
+
+        <h2 class="yesil">Attachments</h2>
+
+            <img src="görsel\hlmv_5.png">
+
+            <h3 class="kirmizi">Origin</h3>
+
+                <p>Burada modeldeki mevcut attachmentler, hangi attachment'in hangı kemiğe bağlı olduğu görüntülenebilir. Origin kısmından ise bu attachmentin konumu ayarlanabilir.</p>
+
+        <h2 class="yesil">Hitboxes</h2>
+
+            <img src="görsel\hlmv_6.png">
+
+            <p>Bu kısım vurulma kutularını ayarlamak içindir. Sol taraftan vurulma kutusu seçebilir, bone kısmından hangi kemiğe ait olduğu ve hitgroup kısmından hangi vurulma grubuna ait olduğu seçilebilir.</p>
+
+            <p>Vurulma kutularının boyutunu ayarlamak için ise eksen yönlerindeki minimum ve maksimum değerlerini değiştiriyoruz. Sağ tarafta ise bu vurulma kutusunun qc komutu şeklinde yazılışı vardır.</p>
+
+        <h2 class="yesil">Textures</h2>
+
+            <img src="görsel\hlmv_7.png">
+
+            <p>Bu kısımda modelin mevcut dokuları görüntüleniyor. Dokuların görüntülenme boyutunu değiştirmek için sol altta Scale Texture View barını sağa doğru çekin.</p>
+
+            <h3 class="kirmizi">Render Modu Seçme</h3>
+
+                <p>Dokunun işlenme modunu değiştirmek için chrome,additive,transparent ve fullbright seçeneklerinden birini seçin.</p>
+
+            <h3 class="kirmizi">UV Map Görüntüleme</h3>
+
+                <p>UV Map'lar modelin 2 boyutlu olacak şekilde açılmış şeklidir. Show UV seçeneğine tıklayarak doku üzerindeki model açılımını görüntüleyebilir, Overlay UV Map seçeneğine tıklayarak model açılımını doku üzerinde görüntüleyebilirsiniz. Anti-Alias Lines seçeneğini seçmek UV Map çizgilerine yumuşatma efekti uygular.</p>
+
+            <h3 class="kirmizi">Doku Ekleme Çıkarma</h3>
+
+                <p>Modeli çözmeden  HLMV üzerinden dokularını değiştirebilirsiniz. Import Texture ile mevcut mesh üzerine yeni doku ekleyebilir, Export Texture butonu ile meshin mevcut dokusunu bilgisayarınıza çıkartabilirsiniz. Export All Textures butonu ise modelin tüm dokularını bilgisayarınıza çıkartır.</p>
+
+        <h2 class="yesil">Sequences</h2>
+
+            <img src="görsel\hlmv_8.png">
+
+            <p>Bu kısım modelin mevcut animasyonlarını görüntülemek içindir. Sol taraftan görüntülemek istediğiniz animasyonu seçebilirsiniz. Animasyon hızını seçme sol alt kısımdaki bar ile yada barın soluna değer girerek değiştirebilirsiniz.</p>
+
+            <p>Animasyonun bittikten sonra tekrar edip etmemesi için Looping Mode kısmından Always Loop ile sürekli devam etmesini, Never Loop ile asla tekrar etmemesini, Use Sequence Setting seçeneği ile de animasyonun kendi ayarına göre davranmasını seçebilirsiniz.</p>
+
+    </main>
+    <footer>
+    </footer>
+
+</body>
+
+</html>
