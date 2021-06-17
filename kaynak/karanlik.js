@@ -1,4 +1,4 @@
-window.onload = function () {
+    function modyukle() {
     var btn = document.querySelector(".b_header2");
     btn.addEventListener("click", moddegis);
 
@@ -7,7 +7,6 @@ window.onload = function () {
     var tema = document.querySelector("body");
 
     if(eskitema == "Karanlık Mod"){
-       // document.body.classList.add("karanlik");
        tema.classList.toggle("karanlik");
         yazi.innerHTML = "Aydınlık Mod";
     }
@@ -30,4 +29,3 @@ window.onload = function () {
         tema.classList.toggle("karanlik");
     }
 }
-// sayfalar arası geçişte karanlık mod korunmuyor

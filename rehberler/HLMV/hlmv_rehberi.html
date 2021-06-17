@@ -6,9 +6,10 @@
     <title>
         HLMV Kullanım Rehberi - Figeros.net
     </title>
-
-    <link rel="stylesheet" href="../../stil.css">
-    <script src="../../karanlik.js"></script>
+    
+    <link rel="stylesheet" href="../../kaynak/stil.css">
+    <script src="../../kaynak/karanlik.js"></script>
+    <script src="../../kaynak/resimyukle.js"></script>
 
 </head>
 
@@ -86,14 +87,14 @@
 
         <h2 class="yesil">View Origin</h2>
 
-            <img src="görsel\hlmv_0.png"> 
+            <img> 
             <p class="aciklama">Solda modelin Free View moduyla, Sağda modelin Weapon Origin moduyla gösterimi</p>       
 
             <p>Free View butonu serbest kamera moduna geçerken, Weapon Origin butonu silahların birincil bakış modellerini görüntülemek için olan sabit kamera moduna geçer.</p>
 
         <h2 class="yesil">Model Display</h2>
 
-            <img src="görsel\hlmv_1_0.png">
+            <img>
 
             <h3 class="kirmizi">Render mode</h3>
 
@@ -105,7 +106,7 @@
             
             <hr /> <br />
 
-            <img src="görsel\hlmv_1_1.png">
+            <img>
             <p class="aciklama">Sırasıyla Show Hit Boxes, Show Bones, Show Attachments, Show Eye Position seçeneklerinin gösterimi</p>
 
             <h3 class="kirmizi">Show Hit Boxes</h3>
@@ -130,7 +131,7 @@
 
             <hr /> <br />
             
-            <img src="görsel\hlmv_1_2.png">
+            <img>
             <p class="aciklama">Sırasıyla Show Ground, Mirror Model On Ground, Show Background seçeneklerinin gösterimi</p>
 
             <h3 class="kirmizi">Show Ground</h3>
@@ -147,7 +148,7 @@
 
             <hr /> <br />
 
-            <img src="görsel\hlmv_1_3.png">
+            <img>
             <p class="aciklama">Sırasıyla Wireframe Overlay, Draw Shadows, Fix Shadow Z Fighting, Show Axes seçeneklerinin gösterimi</p>
             
             <h3 class="kirmizi">Wireframe Overlay</h3>
@@ -168,7 +169,7 @@
 
             <hr /> <br />
 
-            <img src="görsel\hlmv_1_4_1.png">
+            <img>
             <p class="aciklama">Sırasıyla Show Normals, Show Player Hitbox seçeneklerinin gösterimi</p>
 
             <h3 class="kirmizi">Show Normals</h3>
@@ -183,13 +184,13 @@
 
                 <p>Seçildiğinde ekrana birincil bakış silah modelleri için kullanılan nişangah yerleştirir.</p>
 
-            <img src="görsel\hlmv_1_4_2.png">
+            <img>
 
-            <h3 class="kirmizi">Show Crosshair</h3>
+            <h3 class="kirmizi">Show Guidelines</h3>
 
                 <p>Seçildiğinde birincil bakış silah modellerinin oyunda ekrana nasıl sığdığını göstermek için bir kutu yerleştirir.</p>
 
-            <img src="görsel\hlmv_1_4_3.png">
+            <img>
 
             <h3 class="kirmizi">Mirror on axis</h3>
 
@@ -201,7 +202,7 @@
 
         <h2 class="yesil">Model Data</h2>
 
-            <img src="görsel\hlmv_2.png">
+            <img>
 
             <h3 class="kirmizi">Origin</h3>
 
@@ -217,7 +218,7 @@
 
         <h2 class="yesil">Body Parts</h2>
 
-            <img src="görsel\hlmv_3.png">
+            <img>
 
             <h3 class="kirmizi">Part, Sub-model ve Skin</h3>
 
@@ -225,13 +226,13 @@
 
         <h2 class="yesil">Bones</h2>
 
-            <img src="görsel\hlmv_4.png">
+            <img>
 
             <p>Burada modelin mevcut kemikleri ve varsa bu kemiklere bağlı kontrolcüler görüntülenebilir. Kontrolcüler npclerin ağız hareketleri , oyuncuya kafalarını çevirmeleri gibi olayları gerçekleştirmesini sağlar</p>
 
         <h2 class="yesil">Attachments</h2>
 
-            <img src="görsel\hlmv_5.png">
+            <img>
 
             <h3 class="kirmizi">Origin</h3>
 
@@ -239,7 +240,7 @@
 
         <h2 class="yesil">Hitboxes</h2>
 
-            <img src="görsel\hlmv_6.png">
+            <img>
 
             <p>Bu kısım vurulma kutularını ayarlamak içindir. Sol taraftan vurulma kutusu seçebilir, bone kısmından hangi kemiğe ait olduğu ve hitgroup kısmından hangi vurulma grubuna ait olduğu seçilebilir.</p>
 
@@ -247,7 +248,7 @@
 
         <h2 class="yesil">Textures</h2>
 
-            <img src="görsel\hlmv_7.png">
+            <img>
 
             <p>Bu kısımda modelin mevcut dokuları görüntüleniyor. Dokuların görüntülenme boyutunu değiştirmek için sol altta Scale Texture View barını sağa doğru çekin.</p>
 
@@ -265,7 +266,7 @@
 
         <h2 class="yesil">Sequences</h2>
 
-            <img src="görsel\hlmv_8.png">
+            <img>
 
             <p>Bu kısım modelin mevcut animasyonlarını görüntülemek içindir. Sol taraftan görüntülemek istediğiniz animasyonu seçebilirsiniz. Animasyon hızını seçme sol alt kısımdaki bar ile yada barın soluna değer girerek değiştirebilirsiniz.</p>
 
@@ -274,6 +275,12 @@
     </main>
     <footer>
     </footer>
+
+    <script>
+
+    window.onload = resimyukle("hlmv");modyukle();
+
+    </script>
 
 </body>
 

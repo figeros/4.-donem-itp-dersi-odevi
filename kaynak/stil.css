@@ -12,10 +12,6 @@ header , footer {
     padding: 50px;
     color: white;
 }
-header {
-    min-height: 185px;
-}
-
 footer {
     height: auto;
 }

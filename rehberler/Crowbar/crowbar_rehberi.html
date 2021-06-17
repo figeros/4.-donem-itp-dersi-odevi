@@ -7,9 +7,10 @@
         Crowbar Yazılımı Kullanım Rehberi - Figeros.net
     </title>
 
-    <link rel="stylesheet" href="../../stil.css">
-    <script src="../../karanlik.js"></script>
-
+    <link rel="stylesheet" href="../../kaynak/stil.css">
+    <script src="../../kaynak/karanlik.js" ></script>
+    <script src="../../kaynak/resimyukle.js"></script>
+    
 </head>
 
 <body>
@@ -31,13 +32,15 @@
         </div>  
     </header>
     <main>
+
+        
         
         <p>Crowbar Goldsrc ve Source grafik motorları için decompile, compile işlemlerini yapma , model görüntüleme vb. işlemleri yapabileceğiniz ücretsiz bir yazılımdır. <a href=https://github.com/ZeqMacaw/Crowbar> Buradan</a> indirebilirsiniz.</p>
         <p>Bu rehberde Crowbar yazılımının kullanımı anlatılacaktır.</p>
         
         <h2 class="yesil">Set Up Games</h2>
 
-            <img src="görsel\crwbr_1.png">
+            <img>
 
             <p>Crowbar programında herhangi bir oyun için derleyeci, görüntüleyici ve paketleyici gibi özelliklere erişebilmek için belirli araçlara gereksinim vardır, crowbar otomatik olarak bu araçların yerini bulamaz, bu yüzden bunların yerini belirtmek gerekir, varsayılan olarak steam kütüphanesi adresi gösterilir</p>
             
@@ -65,7 +68,7 @@
                 
                 <p>Add Macro butonuna tıklayarak yeni makro ekleyebilir, Browse butonuna tıklayarak da yeni dizin adresini belirtebilirsiniz.</p>
                 
-                <img src="görsel\crwbr_1.1.png">
+                <img>
 
                 <p>Eklenen makroya fare ile sağ tıklandığında:</p>
 
@@ -89,7 +92,7 @@
         
         <h2 class="yesil">Download</h2>
 
-            <img src="görsel\crwbr_2.png">
+            <img>
 
             <p>Steam Workshop üzerinden herhangi bir oyun için dosya indirmenizi sağlar. Dosyanın bulunduğu web adresi veya dosyanın IDsini "Item ID or link" kısmına yazmanız gerekiyor. "Output to" kısmında ise dosyaların hangi dizine indirileceği belirtiliyor. Daha sonra Download butonuna tıklayarak indirme işlemini başlatılıyor.</p>
 
@@ -107,7 +110,7 @@
        
         <h2 class="yesil">Unpack</h2>
 
-            <img src="görsel\crwbr_3.png">
+            <img>
 
             <p>Crowbar herhangi Valve VPK  arşivini , Garry's Mod GMA, Vampire: The Masquerade - Bloodlines VPK, Tactical Intervention FPX ve Fairy Tale Busters APK paketlerini  çıkartabilir</p>
 
@@ -137,7 +140,7 @@
 
         <h2 class="yesil">Preview</h2>
 
-            <img src="görsel\crwbr_4.png">
+            <img>
         
             <p>Bu kısım model hakkında basit bilgi almak içindir.Buradan her oyunun kendi model göstericisine, harita yapıcısına veya oyunun kendisine erişebilir.</p>
 
@@ -170,7 +173,7 @@
 
         <h2 class="yesil">Decompile</h2>
 
-            <img src="görsel\crwbr_5.png">
+            <img>
 
             <h3 class="kirmizi">MDL input</h3> 
 
@@ -265,7 +268,7 @@
                     <p>Seçildiğinde dosya içine yazılan yorumları da çıkarır.</p>
         <h2 class="yesil">Compile</h2>
 
-            <img src="görsel\crwbr_6.png">
+            <img>
 
             <p>Crowbar kendi başına model derleyemez, derleme işlemini yapması için studiomdl derleyicisini çağırır.Bu yüzden derlemek istediğiniz modelin oyununun derleyicisine sahip olmanız gerekmektedir.</p>
 
@@ -295,19 +298,26 @@
 
         <h2 class="yesil">View</h2>
 
-            <img src="görsel\crwbr_7.png">
+            <img>
 
             <p>Bu kısım Preview kısmıyla aynı özelliklere sahip,aynı anda 2 modeli inceleyebilmek için oluşturuldu.</p>
 
         <h2 class="yesil">Pack</h2>
 
-            <img src="görsel\crwbr_8.png">
+            <img>
 
             <p>Bir klasörü Valve VPK ya da Garry's Mod GMA arşivine çeivir.GMA dosyasına çevirebilmeniz için addon.json dosyasına ihtiyacınız vardır.</p>
     
+            
     </main>
     <footer>
     </footer>
+
+    <script>
+
+        window.onload = resimyukle("crwbr");modyukle();
+    
+    </script>
 
 </body>
 
